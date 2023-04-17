@@ -1,0 +1,13 @@
+def solution(a,b,n):
+  a.sort()
+  b.sort(reverse=True)
+  answer = 0
+  for i in range(n):
+    answer += a[i]*b[i]
+
+  return answer
+
+n = int(input())
+a = list(map(int,input().split()))
+b = list(map(int,input().split()))
+print(solution(a,b,n))

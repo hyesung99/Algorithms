@@ -16,6 +16,7 @@ const dfs = () => {
   while(true){
     
     let visited = Array.from({length : N}, () => Array.from({length : M}).fill(false));
+    console.log(visited);
     let willVisit = [];
     let start_x;
     let start_y;
