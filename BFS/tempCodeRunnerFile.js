@@ -1,1 +1,1 @@
-  console.log('curr:',curr_x,curr_y);
+console.log(graph);
