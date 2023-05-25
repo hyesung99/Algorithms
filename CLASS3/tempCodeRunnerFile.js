@@ -1,3 +1,2 @@
 
-    //   if(broken.includes[n+1])
-    // }
+  console.log(parent);
