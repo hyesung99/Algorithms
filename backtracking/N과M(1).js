@@ -1,0 +1,24 @@
+const [N,M] = require('fs').readFileSync('input.txt').toString().trim().split(' ').map(Number);
+
+const visited = new Array(N);
+let output = [];
+let result = '';
+
+
+function dfs(cnt) {
+  // console.log(output);
+  if (cnt === M) {
+    result += `${output.join(' ')}\n`;
+    return;
+  }
+  for(let i=0; i<N; i++){
+    if(visited[i] === true) continue;
+    visited[i] = true;
+    output.push(i+1);
+    dfs(cnt+1);
+    output.pop();
+    visited[i] = false;
+  }
+}
+dfs(0);
+console.log(result.trim());
