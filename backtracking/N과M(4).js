@@ -11,12 +11,9 @@ function dfs(cnt, start) {
   }
 
   for(let i=start; i<N; i++){
-
       output.push(i+1);
       dfs(cnt+1,i);
       output.pop();
-    
-
   }
 }
 
