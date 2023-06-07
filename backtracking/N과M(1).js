@@ -6,7 +6,6 @@ let result = '';
 
 
 function dfs(cnt) {
-  // console.log(output);
   if (cnt === M) {
     result += `${output.join(' ')}\n`;
     return;
