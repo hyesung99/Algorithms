@@ -9,7 +9,9 @@ for(let i=0; i<N; i++){
   const sorted = [heights.shift()];
   for(let height of heights){
     for(let i=0; i<cnt; i++){
-      
+      if(height < heights[i]){
+        
+      }
     }
   }
   
