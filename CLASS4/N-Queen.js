@@ -30,3 +30,5 @@ let findQueen = (row) => {
 findQueen(0);
 
 console.log(answer);
+let test;
+console.log(`${test}`)
