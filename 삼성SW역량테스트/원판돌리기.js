@@ -1,6 +1,5 @@
 const input = require('fs').readFileSync('input.txt').toString().trim().split('\n');
 const [N,M,T] = input.shift().split(' ').map(item => Number(item));
-const circles = [['dummy']];
 const moves = [[0,1],[0,-1],[1,0],[-1,0]];
 // 1.rotate함수 구현 -> done
 // 2.원판에 수 남아있으면 인접하면서 수가 같은 것 모두 찾음. -> done
@@ -8,6 +7,7 @@ const moves = [[0,1],[0,-1],[1,0],[-1,0]];
 // 4.없는 경우에는 원판에 적힌수의 평균을 구하고, 평균보다 큰 수에서 1을 빼고, 작은 수에는 1을 더한다.
 
 
+const circles = [['dummy']];
 for(let i=0; i<N; i++){
   circles.push(input.shift().split(' ').map(Number));
 }
@@ -32,7 +32,7 @@ function rotate(multiple,direction,amount){
       break;
     }
   }
-  findAndDelete(circles);
+  findAndDelete();
 }
 
 function findAndDelete(){
@@ -89,8 +89,7 @@ function averagePlusMinus(){
 
 for(let i=0; i<T; i++){
   const[xi,di,ki] = input.shift().split(' ').map(Number);
-
-  rotate(xi,di,ki,circles);
+  rotate(xi,di,ki);
 }
 
 console.log(circles.slice(1,N+1).flat().reduce((sum, cur) => sum+cur,0));

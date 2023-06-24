@@ -1,4 +1,2 @@
-  // while(wave[curr+search] !== 0){
-      //   search++;
-      //   console.log('find +0');
-      // }
+
+      console.log('충전', distance 
