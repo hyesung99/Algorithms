@@ -25,6 +25,8 @@ function rotate(multiple,direction,amount){
         }
         break;
       // 반시계방향
+
+      
       case 1 :
       for(let j=0; j<amount; j++){
         circle.push(circle.shift());
